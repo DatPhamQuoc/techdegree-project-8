@@ -1,0 +1,29 @@
+extends layout.pug
+
+block content
+  body
+    h1 Books
+    a.button(href='/books/new') Create New Book
+    form.search(method='post')
+      input(type='search name='search' placeholder='Title of the book...')
+      input(type='submit' value='Search')
+    table
+      thead
+        tr
+          th Title
+          th Author
+          th Genre
+          th Year
+      tbody
+        each book in data
+          tr
+            td
+              a(href=`/book/${book.id}`)= book.title
+            td= book.author
+            td= book.genre
+            td= book.year
+    - var n = 1
+    ul
+      while n <= numberOfBook
+        li
+          a(href=`/books/page-${n}`)= n++
