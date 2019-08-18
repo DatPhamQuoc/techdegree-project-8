@@ -5,8 +5,8 @@ block content
     h1 Books
     a.button(href='/books/new') Create New Book
     form.search(method='post')
-      input(type='search name='search' placeholder='Title of the book...')
-      input(type='submit' value='Search')
+      input(type='search' name='search')
+      input.search(type='submit' value='Search')
     table
       thead
         tr
@@ -22,8 +22,5 @@ block content
             td= book.author
             td= book.genre
             td= book.year
-    - var n = 1
-    ul
-      while n <= numberOfBook
-        li
-          a(href=`/books/page-${n}`)= n++
+
+    script(src='/static/script.js')

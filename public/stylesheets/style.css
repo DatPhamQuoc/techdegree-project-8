@@ -30,6 +30,11 @@ form a.button, input[type=submit] {
   transition: 0.4s;
 }
 
+form.search input[type=submit] {
+  margin-left: 10px;
+  transition: 0.4s;
+}
+
 form a.searchButton {
   margin-left: 10px;
   color: white;
@@ -52,6 +57,7 @@ input[type=submit] {
 
   a.button:hover, input[type=submit]:hover {
     background-color: #01b189;
+    cursor: pointer;
   }
 
 p a[href='/books/new'] {
@@ -124,6 +130,11 @@ li {
 
 .search {
   display: inline;
+  margin-left: 10px;
+}
+
+a {
+  cursor: pointer;
 }
 
 table {
